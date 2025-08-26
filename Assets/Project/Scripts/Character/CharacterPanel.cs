@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CharacterPanel : MonoSystem
@@ -21,5 +22,15 @@ public class CharacterPanel : MonoSystem
         var newCharUI = Instantiate(characterUIPrefab, charHolder);
         newCharUI.SetCharacter(characterGame);
         charsInPanel.Add(newCharUI);
+    }
+
+    public void SetCharacterShow(CharacterGame characterGame, bool state)
+    {
+        charsInPanel.First(x => x.currentCharacter == characterGame).gameObject.SetActive(state);
+    }
+
+    public void SetCharacterTravelButton(CharacterGame characterGame, bool state)
+    {
+        charsInPanel.First(x => x.currentCharacter == characterGame).travelButton.gameObject.SetActive(state);
     }
 }

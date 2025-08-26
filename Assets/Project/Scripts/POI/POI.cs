@@ -29,12 +29,12 @@ public class POI : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
-        var panel = G.Services.Get<CharacterPanel>();
-        panel.Clear();
-        foreach (var chara in characters)
-        {
-            panel.AddCharacter(chara);
-        }
+        // var panel = G.Services.Get<CharacterPanel>();
+        // panel.Clear();
+        // foreach (var chara in characters)
+        // {
+        //     panel.AddCharacter(chara);
+        // }
         _poiManager.OnPOISelected.OnNext(this);
     }
 }

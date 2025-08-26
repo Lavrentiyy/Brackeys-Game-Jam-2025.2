@@ -6,16 +6,22 @@ using UnityEngine.UI;
 
 public class CharacterUI : MonoBehaviour
 {
-    private CharacterGame currentCharacter;
+    public CharacterGame currentCharacter;
 
     [SerializeField] private Image icon;
     [SerializeField] private TMP_Text nameText;
-    [SerializeField] private Button travelButton;
+    public Button travelButton;
+    public Button inventoryButton;
+    
 
     private void Start()
     {
         travelButton.OnClickAsObservable().Subscribe(_ => G.Get<TravelManager>().TravelState(currentCharacter))
             .AddTo(this);
+        inventoryButton.OnClickAsObservable().Subscribe(_ =>
+        {
+            G.Get<FullCharacterUIManager>().ShowCharacter(currentCharacter);
+        }).AddTo(this);
     }
 
     public void SetCharacter(CharacterGame characterGame)
