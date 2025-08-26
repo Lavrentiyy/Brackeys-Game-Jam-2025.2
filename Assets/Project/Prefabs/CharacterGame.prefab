@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 0}
+  currentPoi: {fileID: 0}
 --- !u!114 &3207855092661420955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,6 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 930e7989b50a2694e9b6233178d2a404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &9187918429955380065
 GameObject:
   m_ObjectHideFlags: 0

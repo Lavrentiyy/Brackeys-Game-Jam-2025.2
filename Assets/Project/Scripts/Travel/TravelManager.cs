@@ -7,6 +7,7 @@ public class TravelManager : MonoSystem
     
     public void TravelState(CharacterGame characterGame)
     {
+        UnTravelState();
         travelChoosePoiDisposable = G.Get<POIManager>().OnPOISelected
             .Subscribe(x =>
             {
