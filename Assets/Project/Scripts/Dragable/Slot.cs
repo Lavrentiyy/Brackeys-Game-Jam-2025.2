@@ -16,7 +16,6 @@ public class Slot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
     public bool TryPlace(Dragable dragable)
     {
         if (currentDragable != null) return false;
-        Debug.Log("Place");
         currentDragable = dragable;
         currentDragable.transform.SetParent(transform);
         currentDragable.transform.DOMove(transform.position, 0.1f);
@@ -30,7 +29,6 @@ public class Slot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
     }
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("drop");
         var dragable = eventData.pointerDrag.GetComponent<Dragable>();
         if (dragable != null)
         {

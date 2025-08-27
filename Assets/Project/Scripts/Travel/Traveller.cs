@@ -15,15 +15,15 @@ public class Traveller : MonoBehaviour
         var charGame = GetComponent<CharacterGame>();
         var panel = G.Get<CharacterPanel>();
         panel.SetCharacterTravelButton(charGame, false);
-        // if (charGame.currentPoi != null)
-        // {
-        //     charGame.currentPoi.RemoveCharacter(charGame);
-        // }
-        //
+        if (charGame.currentPoi != null)
+        {
+            charGame.currentPoi.RemoveCharacter(charGame);
+        }
+        
         moveTween = transform.DOMove(travelPOI.transform.position,
             Vector2.Distance(transform.position, travelPOI.transform.position) / speed).SetEase(ease).OnComplete(() =>
         {
-            // travelPOI.AddCharacter(charGame);
+            travelPOI.AddCharacter(charGame);
             panel.SetCharacterTravelButton(charGame, true);
         });
     }

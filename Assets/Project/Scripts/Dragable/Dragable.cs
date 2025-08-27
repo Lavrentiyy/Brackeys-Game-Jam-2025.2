@@ -34,7 +34,6 @@ public class Dragable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("End drag");
         var manager = G.Get<SlotManager>();
         if (prevSlot != null)
         {
