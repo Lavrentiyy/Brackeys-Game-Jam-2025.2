@@ -45,5 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 401
+  itemType: 3
+  slotType: 2
+  rareValue: 0
   itemName: Motorcycle helmet
   itemIcon: {fileID: 21300000, guid: 19189d5d4c9b57941acfd5ed2ed178f7, type: 3}

@@ -10,7 +10,6 @@ public class Traveller : MonoBehaviour
     public void StartTravel(POI poi)
     {
         moveTween.Kill();
-        Debug.Log($"{gameObject} start travelling to {poi}");
         travelPOI = poi;
         var charGame = GetComponent<CharacterGame>();
         var panel = G.Get<CharacterPanel>();
@@ -25,6 +24,19 @@ public class Traveller : MonoBehaviour
         {
             travelPOI.AddCharacter(charGame);
             panel.SetCharacterTravelButton(charGame, true);
+            OnTravelToPoi(travelPOI);
         });
+    }
+
+    private void OnTravelToPoi(POI poi)
+    {
+        if (poi.TryGetComponent<ScavengingPOI>(out var scavengingPoi))
+        {
+            foreach (var onPoi in GetComponents<IOnScavengerPOIEnter>())
+            {
+                onPoi.OnScavengerPoiEnter(scavengingPoi);
+            }
+        }
+
     }
 }

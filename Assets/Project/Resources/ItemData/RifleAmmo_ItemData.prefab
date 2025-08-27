@@ -45,5 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 203
+  itemType: 2
   itemName: Rifle ammo
   itemIcon: {fileID: 0}

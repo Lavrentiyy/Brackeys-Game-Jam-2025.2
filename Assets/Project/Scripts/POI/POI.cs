@@ -38,3 +38,11 @@ public class POI : MonoBehaviour
         _poiManager.OnPOISelected.OnNext(this);
     }
 }
+
+public enum PoiType
+{
+    Food,
+    Ammo,
+    Weapon,
+    Cloth
+}

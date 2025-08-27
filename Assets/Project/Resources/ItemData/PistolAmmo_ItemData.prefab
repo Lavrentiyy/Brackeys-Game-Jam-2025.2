@@ -45,5 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 201
+  itemType: 2
   itemName: Pistol ammo
   itemIcon: {fileID: 21300000, guid: 5cb7f37d0f9a32442a7df22603c77b18, type: 3}

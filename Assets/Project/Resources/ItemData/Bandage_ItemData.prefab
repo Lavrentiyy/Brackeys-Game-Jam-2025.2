@@ -45,5 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 101
+  itemType: 1
   itemName: Bandage
   itemIcon: {fileID: 21300000, guid: 5071f8dbd3265ec4296641fd1dbd9d28, type: 3}

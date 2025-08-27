@@ -45,5 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 202
+  itemType: 2
   itemName: Shotgun ammo
   itemIcon: {fileID: 0}

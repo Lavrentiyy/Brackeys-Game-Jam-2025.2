@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 public class Slot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
     private Dragable currentDragable;
+    public SlotType slotType;
+    public Dragable CurrentDragable => currentDragable;
     private SlotManager slotManager;
     [SerializeField] private float timeToSlot;
 
@@ -15,7 +17,8 @@ public class Slot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
 
     public bool TryPlace(Dragable dragable)
     {
-        if (currentDragable != null) return false;
+        if (currentDragable != null || (slotType != SlotType.Any && slotType != dragable.GetComponent<ItemUI>().itemData.slotType)) return false;
+        
         currentDragable = dragable;
         currentDragable.transform.SetParent(transform);
         currentDragable.transform.DOMove(transform.position, 0.1f);
@@ -45,4 +48,25 @@ public class Slot : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerE
     {
         slotManager.currentSlot = null;
     }
+
+    public void SetDraggable(Dragable dragable)
+    {
+        if(currentDragable != null)
+            RemoveDraggable();
+        currentDragable = dragable;
+    }
+
+    public void RemoveDraggable()
+    {
+        if(!currentDragable) return;
+        currentDragable = null;
+    }
+}
+
+public enum SlotType
+{
+    Any,
+    Cloth,
+    Helmet,
+    Weapon,
 }

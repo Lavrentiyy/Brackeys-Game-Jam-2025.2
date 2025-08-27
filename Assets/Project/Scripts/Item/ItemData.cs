@@ -2,12 +2,15 @@ using UnityEngine;
 
 public class ItemData : MonoBehaviour
 {
-    public ItemType itemId;
+    public ItemId itemId;
+    public ItemType itemType;
+    public SlotType slotType;
+    public int rareValue;
     public string itemName;
     public Sprite itemIcon;
 }
 
-public enum ItemType
+public enum ItemId
 {
     //0-100 food
     FoodCan = 0,
@@ -28,4 +31,13 @@ public enum ItemType
     
     //501-600 weapon
     PistolLuger = 501,
+}
+
+public enum ItemType
+{
+    Food,
+    Medicine,
+    Ammo,
+    Cloth,
+    Weapon
 }

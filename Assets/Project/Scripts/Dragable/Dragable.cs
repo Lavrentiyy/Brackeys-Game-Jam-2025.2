@@ -1,4 +1,3 @@
-using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -15,6 +14,7 @@ public class Dragable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     private void Start()
     {
         cameraMain = Camera.main;
+        dragCanvas = G.Get<FullCharacterUIManager>().transform;
     }
     
     public void OnBeginDrag(PointerEventData eventData)
@@ -34,7 +34,6 @@ public class Dragable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     
     public void OnEndDrag(PointerEventData eventData)
     {
-        var manager = G.Get<SlotManager>();
         if (prevSlot != null)
         {
             // tween = transform.DOMove(prevSlot.transform.position, backTime).SetEase(ease);

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ItemDataManager : MonoSystem
 {
-    private Dictionary<ItemType, ItemData> itemDataDict = new();
+    private Dictionary<ItemId, ItemData> itemDataDict = new();
     protected override void Awake()
     {
         base.Awake();
@@ -14,8 +14,8 @@ public class ItemDataManager : MonoSystem
         }
     }
 
-    public ItemData GetItemData(ItemType itemType)
+    public ItemData GetItemData(ItemId itemId)
     {
-        return itemDataDict[itemType];
+        return itemDataDict[itemId];
     }
 }
