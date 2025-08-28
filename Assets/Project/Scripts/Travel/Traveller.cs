@@ -7,8 +7,16 @@ public class Traveller : MonoBehaviour
     private Tween moveTween;
     [SerializeField] private float speed;
     [SerializeField] private Ease ease;
+    private GameTime gameTime;
+
+    private void Start()
+    {
+        gameTime = G.Get<GameTime>();
+    }
+
     public void StartTravel(POI poi)
     {
+        Debug.Log($"Start travel {poi}");
         moveTween.Kill();
         travelPOI = poi;
         var charGame = GetComponent<CharacterGame>();
@@ -26,6 +34,12 @@ public class Traveller : MonoBehaviour
             panel.SetCharacterTravelButton(charGame, true);
             OnTravelToPoi(travelPOI);
         });
+        moveTween.SetUpdate(UpdateType.Manual);
+    }
+
+    private void Update()
+    {
+        moveTween?.ManualUpdate(Time.deltaTime * gameTime.GameTimeScale, 1);
     }
 
     private void OnTravelToPoi(POI poi)
@@ -37,6 +51,5 @@ public class Traveller : MonoBehaviour
                 onPoi.OnScavengerPoiEnter(scavengingPoi);
             }
         }
-
     }
 }

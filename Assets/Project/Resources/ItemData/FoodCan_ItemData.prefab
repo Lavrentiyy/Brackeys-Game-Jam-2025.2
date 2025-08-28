@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4438592518018125186}
   - component: {fileID: 355982525840117305}
+  - component: {fileID: -1684232105384409585}
   m_Layer: 0
   m_Name: FoodCan_ItemData
   m_TagString: Untagged
@@ -45,5 +46,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 0
+  itemType: 0
+  slotType: 0
+  rareValue: 0
   itemName: Food can
   itemIcon: {fileID: 21300000, guid: 21d56079d1b28b74eb241f8cc8dfb226, type: 3}
+--- !u!114 &-1684232105384409585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8197359466733079293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6afc3f54c70d774e87f88639ffb81f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statType: 1
+  restoreValue: 0.5

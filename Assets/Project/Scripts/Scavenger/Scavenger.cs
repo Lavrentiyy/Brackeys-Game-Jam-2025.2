@@ -15,7 +15,10 @@ public class Scavenger : MonoBehaviour, IOnScavengerPOIEnter
     {
         progressCircle.OnComplete.Take(1).Subscribe(_ =>
         {
-            characterGame.fullCharacterUI.AddItem(scavengingPoi.GetLoot());
+            // characterGame.fullCharacterUI.AddItem(scavengingPoi.GetLoot());
+            var eventContext = new EventContext();
+            eventContext.character = characterGame;
+            scavengingPoi.SetupEvent(eventContext);
         }).AddTo(this);
         progressCircle.StartProgress(1f);
     }

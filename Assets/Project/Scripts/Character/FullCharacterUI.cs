@@ -11,6 +11,8 @@ public class FullCharacterUI : MonoBehaviour
     [SerializeField] private List<Slot> slots = new();
     [SerializeField] private Button closeBtn;
     [SerializeField] private ItemUI itemUIPrefab;
+    [SerializeField] private Bar[] bars;
+    [SerializeField] private CharacterConsume characterConsume;
 
     public CharacterGame currentCharacter;
 
@@ -28,6 +30,14 @@ public class FullCharacterUI : MonoBehaviour
         currentCharacter.fullCharacterUI = this;
         image.sprite = currentCharacter.data.icon;
         charName.SetText(currentCharacter.data.charName);
+
+        var characterStats = characterGame.GetComponent<CharacterStats>();
+        foreach (var bar in bars)
+        {
+            characterStats.LinkBar(bar);
+        }
+
+        characterConsume.characterGame = characterGame;
     }
 
     public void AddItem(ItemData itemData)

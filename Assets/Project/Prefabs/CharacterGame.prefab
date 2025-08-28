@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 3207855092661420955}
   - component: {fileID: 739340406279705748}
   - component: {fileID: 3271842119856510713}
+  - component: {fileID: 4998858939446175341}
   m_Layer: 0
   m_Name: CharacterGame
   m_TagString: Untagged
@@ -241,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 930e7989b50a2694e9b6233178d2a404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 0.5
   ease: 1
 --- !u!114 &739340406279705748
 MonoBehaviour:
@@ -268,6 +269,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circleImage: {fileID: 6536673882069951634}
+--- !u!114 &4998858939446175341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8288840352988877225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a83f357e427512429cc5bf53d5b3892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterStats:
+  - statType: 0
+    value:
+      value: 1
+  - statType: 1
+    value:
+      value: 1
 --- !u!1 &9187918429955380065
 GameObject:
   m_ObjectHideFlags: 0
