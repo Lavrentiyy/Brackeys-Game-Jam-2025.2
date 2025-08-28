@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 16554236}
   - component: {fileID: 16554237}
   - component: {fileID: 16554238}
+  - component: {fileID: 16554239}
   m_Layer: 0
   m_Name: Systems
   m_TagString: Untagged
@@ -291,6 +292,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ead1f2f3ae20a5841aac8abaca53b536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &16554239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16554231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627cc77cc96782741a7b6866677f4f69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &66741367 stripped
@@ -1254,7 +1267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8857408645769919381, guid: 2fe40083f30103c45b8dad493343bf08, type: 3}
       propertyPath: m_Name
-      value: POI
+      value: Meteo POI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1281,7 +1294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05711adc38d4b8f429e2ade98c724405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot: {fileID: 355982525840117305, guid: f1eb2623c9c062b48ac9bc48c5f1baa0, type: 3}
+  lootType: 0
+  lootTier: 0
 --- !u!1001 &496036390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2186,11 +2200,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4314056027445044926, guid: 2fe40083f30103c45b8dad493343bf08, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.3
+      value: 2.15
       objectReference: {fileID: 0}
     - target: {fileID: 4314056027445044926, guid: 2fe40083f30103c45b8dad493343bf08, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.18
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 4314056027445044926, guid: 2fe40083f30103c45b8dad493343bf08, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2230,7 +2244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8857408645769919381, guid: 2fe40083f30103c45b8dad493343bf08, type: 3}
       propertyPath: m_Name
-      value: POI (2)
+      value: Med Car POI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2257,7 +2271,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05711adc38d4b8f429e2ade98c724405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot: {fileID: 1351465928883870303, guid: e20735a5cb4311b4dadaaf14591b89df, type: 3}
+  lootType: 1
+  lootTier: 0
 --- !u!1 &694541170
 GameObject:
   m_ObjectHideFlags: 0
@@ -4149,11 +4164,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4314056027445044926, guid: 2fe40083f30103c45b8dad493343bf08, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.52
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 4314056027445044926, guid: 2fe40083f30103c45b8dad493343bf08, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.75
+      value: -2.09
       objectReference: {fileID: 0}
     - target: {fileID: 4314056027445044926, guid: 2fe40083f30103c45b8dad493343bf08, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4193,7 +4208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8857408645769919381, guid: 2fe40083f30103c45b8dad493343bf08, type: 3}
       propertyPath: m_Name
-      value: POI (1)
+      value: Police Station POI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4501,7 +4516,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05711adc38d4b8f429e2ade98c724405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot: {fileID: 5517788883145473930, guid: 9434b95a28375774da167be52f576b44, type: 3}
+  lootType: 4
+  lootTier: 0
 --- !u!1001 &2126623498
 PrefabInstance:
   m_ObjectHideFlags: 0

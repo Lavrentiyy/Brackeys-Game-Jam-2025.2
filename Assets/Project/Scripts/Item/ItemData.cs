@@ -3,11 +3,12 @@ using UnityEngine;
 public class ItemData : MonoBehaviour
 {
     public ItemId itemId;
-    public ItemType itemType;
-    public SlotType slotType;
-    public int rareValue;
     public string itemName;
     public Sprite itemIcon;
+    public SlotType slotType;
+    [Header("Drop")]
+    public int itemTier;
+    public ItemType itemType;
 }
 
 public enum ItemId
